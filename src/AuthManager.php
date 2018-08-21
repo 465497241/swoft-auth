@@ -155,7 +155,6 @@ class AuthManager implements AuthManagerInterface
             ->setCreateTime($startTime)
             ->setIdentity($identity)
             ->setAccountTypeName($accountTypeName);
-        $session->setExtendedData($data);
         $token = $this->getTokenParser()->getToken($session);
         $session->setToken($token);
         return $session;
